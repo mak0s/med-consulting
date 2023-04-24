@@ -17,7 +17,10 @@
     "react/require-default-props": "off",
     "operator-linebreak": "off",
     "no-restricted-exports": "off",
-    "object-curly-newline": "off"
+    "object-curly-newline": "off",
+    "react/function-component-definition": "off",
+    "no-trailing-spaces": "off",
+    "react/jsx-props-no-spreading": "off"
   },
   "overrides": [
     {

@@ -1,21 +1,12 @@
-import { useTranslation } from '#/localization/hooks';
+import Head from 'next/head';
 
-import wrapper from '@/store';
-import { getT } from '#/localization/utils';
+import { HomePage } from '@/components/pages';
 
 export default function Home() {
-  const { t } = useTranslation();
-
-  return <>{t('common:company.name')}</>;
+  return (
+    <>
+      <Head>Something</Head>
+      <HomePage />
+    </>
+  );
 }
-
-export const getStaticProps = wrapper.getStaticProps(() => async ({ locale }) => {
-  const t = await getT(locale, ['pages/home']);
-  const title = t('pages/home:meta.title');
-
-  return {
-    props: {
-      title,
-    },
-  };
-});
